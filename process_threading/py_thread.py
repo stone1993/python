@@ -9,8 +9,8 @@ get_html_detail 获取文章列表
 get_url_detail 获取文章内容
 """
 from time import sleep,time
-# from threading import Thread
-import threading
+from threading import Thread
+
 
 
 def get_html_detail(url):
@@ -40,7 +40,7 @@ if __name__ == "__main1__":
 #方式2 通过继承Thread 重载 run方法 实现多线程
 if __name__ == "__main__":
 
-    class GetHtmlDetail(threading.Thread):
+    class GetHtmlDetail(Thread):
         def __init__(self,name):
             super().__init__()
             self.name = name
@@ -49,7 +49,7 @@ if __name__ == "__main__":
             sleep(2)
             print("get html detail end")
 
-    class GetUrlDetail(threading.Thread):
+    class GetUrlDetail(Thread):
 
         def __init__(self,name):
             super().__init__()
