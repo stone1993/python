@@ -45,7 +45,7 @@ def  get_loader(url):
 # 原因是 修饰器 将生成器封装 def wrapped 中最后返回
 # return _GeneratorWrapper(coro) 类型
 # 这个对象中 _GeneratorWrapper  重后实现了  __await__ 魔法方法   __await__ = __iter__
-
+# 利用装饰器 将一个函数包装成协程 老方法 不建议使用 建议 使用 async await
 
 # async  def  get_loader(url):
 #     return "xl__"
