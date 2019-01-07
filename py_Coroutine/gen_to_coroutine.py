@@ -18,6 +18,9 @@ describe:  线程 进程 都是系统级别的调度 协程 是用户态 下 函
   #小知识 python 3。5 之前 协程 都是 根据生成器实现的 
    python 3。5之后 有了 原生协程 async await 
    #tomadao 支持 python3。2 python 3。3    tomadao利用的是 生成器 完成的 协程。 
+   
+   协程的 速度 可能不如 事件循环 + 回调机制 
+   但是 协程 解决了 时间循环 多路复用 与传统的同步编程方法相结合了起来 
 """
 import inspect
 
